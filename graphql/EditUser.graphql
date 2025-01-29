@@ -1,0 +1,8 @@
+mutation EditUser($id: bigint!, $name: String, $email: String) {
+  update_users_by_pk(pk_columns: { id: $id }, _set: { name: $name, email: $email }) {
+    id
+    name
+    email
+    updated_at
+  }
+}

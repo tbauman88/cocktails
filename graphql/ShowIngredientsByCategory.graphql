@@ -1,0 +1,10 @@
+query ShowIngredientsByCategory($category: String!) {
+  user_ingredients(where: { category: { _eq: $category } }) {
+    id
+    brand
+    sub_category
+    ingredient {
+      ...IngredientFields
+    }
+  }
+}

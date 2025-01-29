@@ -1,0 +1,8 @@
+fragment UserIngredientFields on user_ingredients {
+  id
+  brand
+  sub_category
+  ingredient {
+    name
+  }
+}

@@ -1,0 +1,21 @@
+mutation StoreDrinkIngredient(
+  $drink_id: bigint!
+  $ingredient_id: bigint!
+  $amount: String
+  $amount_unit: String
+  $garnish: Boolean = false
+  $required: Boolean = true
+) {
+  insert_drink_ingredients_one(
+    object: {
+      drink_id: $drink_id
+      ingredient_id: $ingredient_id
+      amount: $amount
+      amount_unit: $amount_unit
+      garnish: $garnish
+      required: $required
+    }
+  ) {
+    id
+  }
+}

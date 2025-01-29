@@ -1,0 +1,8 @@
+query ShowUserDrinks($userId: bigint!) {
+  user_drinks(where: { user_id: { _eq: $userId } }) {
+    id
+    drink {
+      ...DrinkFields
+    }
+  }
+}

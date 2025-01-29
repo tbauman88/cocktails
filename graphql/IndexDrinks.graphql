@@ -1,0 +1,18 @@
+query IndexDrinks {
+  drinks {
+    ...DrinkFields
+    created_at
+    updated_at
+    drink_ingredients {
+      id
+      amount
+      amount_unit
+      brand
+      garnish
+      required
+      ingredient {
+        ...IngredientFields
+      }
+    }
+  }
+}

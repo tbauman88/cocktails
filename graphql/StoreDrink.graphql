@@ -1,0 +1,9 @@
+mutation StoreDrink($name: String!, $notes: String, $user_id: bigint!, $directions: String) {
+  insert_drinks_one(
+    object: { name: $name, notes: $notes, user_id: $user_id, directions: $directions }
+  ) {
+    id
+    name
+    created_at
+  }
+}

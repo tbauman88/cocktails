@@ -1,0 +1,4 @@
+fragment IngredientFields on ingredients {
+  id
+  name
+}

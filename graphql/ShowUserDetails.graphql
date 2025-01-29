@@ -1,0 +1,14 @@
+query ShowUserDetails($userId: bigint!) {
+  user(id: $userId) {
+    ...UserFields
+    user_ingredients {
+      ...UserIngredientFields
+    }
+    user_drinks {
+      id
+      drink {
+        ...DrinkFields
+      }
+    }
+  }
+}

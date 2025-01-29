@@ -1,0 +1,9 @@
+fragment DrinkFields on drinks {
+  id
+  name
+  notes
+  published
+  save_count
+  directions
+  user_id
+}
