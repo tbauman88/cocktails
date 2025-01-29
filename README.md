@@ -1,71 +1,52 @@
-# Welcome to your Expo app 👋
+# Cocktails Rolodex
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This application will be the hub to find your next go-to cocktail.
+
+## Tech Stack
+
+<div style="display: flex; align-items: center; gap: 10px;">
+    <img src="https://img.shields.io/badge/Hasura-1C1C1C?style=flat&logo=hasura&logoColor=white" alt="Hasura" />
+    <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat&logo=graphql&logoColor=white" alt="GraphQL" />
+    <img src="https://img.shields.io/badge/Expo-1B1F23?style=flat&logo=expo&logoColor=white" alt="Expo" />
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+    <img src="https://img.shields.io/badge/Apollo%20Client-311C87?style=flat&logo=apollo&logoColor=white" alt="Apollo Client" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+</div>
 
 ## Get started
 
-1. Install dependencies
+**Install dependencies**
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**Start the app**
 
-## Learn more
+```
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+**Generate TypeScript types**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+npm run codegen
+```
 
-## Join the community
+**Run tests**
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+npm test
+```
 
 ## GraphQL Setup
 
-1. Set up environment variables in `.env`:
+Set up environment variables in `.env`:
    ```
    EXPO_PUBLIC_HASURA_ENDPOINT=your_hasura_endpoint
    EXPO_PUBLIC_HASURA_ADMIN_SECRET=your_admin_secret
    ```
 
-2. Generate TypeScript types:
-   ```bash
-   npm run codegen
-   ```
+## Learn more
 
-3. Using GraphQL:
-   ```typescript
-   import { useQuery } from '@apollo/client';
-   import { GetUsersQuery } from '../generated/graphql';
-
-   // Your queries and mutations will be typed!
-   ```
+To learn more about developing your project with Expo, refer to the [Expo documentation](https://docs.expo.dev/).
